@@ -1,0 +1,33 @@
+<div id="qpayorder">
+    <head>
+        <a routerLink="/mine">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>未支付订单</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <p class="nothing">空空如也~</p>
+        <div class="qall">
+            <div class="qall-r">
+                <div *ngFor='let obj of arrgoods' class="qall-g" >
+                    <div class="qall-g-t">                      
+                        <img src="{{obj.goodImg}}"  />
+                        <div>
+                            <p class="qall-msg">收货人：{{obj.consigMsg.consigName}}</p>
+                            <p class="qall-total">订单金额：{{obj.total}} 元</p>
+                            <p>配送时间：{{obj.deliveryDate}}</p>
+                            <p class="status">订单状态：未付款</p>
+                        </div>
+                        
+                    </div>
+                    <div class="qall-g-b">
+                        <span class="qall-pay" (click)="pay(obj.id)" >立即支付</span>
+                        <span class="qall-nopay" (click)="nopay(obj.id)" >取消订单</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="qpaysuccess locate">支付成功！</p>
+    </main>
+</div>

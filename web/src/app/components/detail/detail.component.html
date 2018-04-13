@@ -1,0 +1,131 @@
+<div id="ct_detail">
+    <span id="message" class="locate"></span>
+    <i id="totop" class="fa fa-long-arrow-up" (click)="totop()"></i>
+    <div class="header">
+        <h3>{{title}}</h3>
+    </div>
+    <i class="fa fa-angle-left headeri" (click)="goback()"></i>
+    <i class="fa fa-home headeri" (click)="gohome()"></i>
+    <div class="main" (scroll)="mscroll($event)">
+        <div class="pro_banner">
+        <div id="test"></div>
+           <div id="log_window">
+               <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let img of imgs">
+                        <img  src="../../../assets/loading.gif" lazy [attr.data-img]="img" />
+                    <!-- <img src={{img}}/> -->
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+            <div class="info_box">
+                <div class="imgbox" (click)="collect()">
+                    <img src="//img02.hua.com/m/pro_detail/icon_collect.png" *ngIf="!col"/>
+                    <img src="//img02.hua.com/m/pro_detail/icon_collect_pressed.png" *ngIf="col"/>
+                </div>
+                <p *ngIf="dataset.flowerName">{{dataset.flowerName}}<span class="cuxiao_tip"></span><span class="xianshi_buy" style="display:none">限时抢购</span></p>
+                <span class="now_price" *ngIf="dataset.price">￥{{dataset.price}}</span>
+                <del *ngIf="dataset.oprice">￥{{dataset.oprice}}</del>
+                <span class="discount_price" *ngIf="dataset.price">{{dataset.price/dataset.oprice*10|number:"1.1-1"}}折</span>
+            </div>
+        </div>
+        <div class="pro_text">
+            <div *ngIf="dataset.florid">
+                <span>花语</span>
+                <p>{{dataset.florid}}</p>
+            </div>
+            <div *ngIf="dataset.materials">
+                <span>材料</span>
+                <p>{{dataset.materials}}</p>
+            </div>
+            <div *ngIf="dataset.express">
+                <span>配送</span>
+                <p>{{dataset.express}}</p>
+            </div>
+             <div *ngIf="dataset.fusong">
+                <span>附送</span>
+                <p>{{dataset.fusong}}</p>
+            </div>
+             <div *ngIf="dataset.explain">
+                <span>说明</span>
+                <p>{{dataset.explain}}</p>
+            </div>
+        </div>
+        <div class="pro_estimate">
+            <p>订单评价 <span>87条评价<i class="fa fa-angle-right"></i></span></p>
+            <ul>
+                <li>
+                    <div class="img">
+                        <img src={{imgs[0]}}/>    
+                    </div>
+                    <div class="des">
+                        <p class="username">135****9967</p>
+                        <p class="useradvice">很满意，没想到这么快，没耽误，感谢！</p>
+                        <p class="useradress"><i class="fa fa-map-marker"></i>福建厦门市翔安区翔海路1号***</p>
+
+                    </div>
+                    <div class="star">
+                        <img src="//img02.hua.com/m/pro_detail/star5.png" alt="">
+                        <p>2018-4-12</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img">
+                        <img src={{imgs[0]}}/>    
+                    </div>
+                    <div class="des">
+                        <p class="username">152****2158</p>
+                        <p class="useradvice">当天订，隔天到，快速给力，服务给力，很好，会继续购买的，很不错的礼品网店！</p>
+                        <p class="useradress"><i class="fa fa-map-marker"></i>上海浦东新区下南路879号昌邑*****</p>
+
+                    </div>
+                    <div class="star">
+                        <img src="//img02.hua.com/m/pro_detail/star4.png" alt="">
+                        <p>2017-11-23</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img">
+                        <img src={{imgs[0]}}/>    
+                    </div>
+                    <div class="des">
+                        <p class="username">5975017*</p>
+                        <p class="useradvice">送货及时到位，售后服务好</p>
+                        <p class="useradress"><i class="fa fa-map-marker"></i>北京丰台区花乡张家路口121号*****</p>
+
+                    </div>
+                    <div class="star">
+                        <img src="//img02.hua.com/m/pro_detail/star4.png" alt="">
+                        <p>2017-5-21</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="pro_des">
+            <ul *ngIf="imgs">
+                <li *ngFor="let imgurl of imgs">
+                    <img  src="../../../assets/loading.gif" lazy [attr.data-img]="imgurl" />
+                </li>
+            </ul>
+        </div>
+        <div class="tuijian">
+        
+        </div>
+
+    </div>
+    <div class="foot">
+        <el-breadcrumb  separator="|" [el-class]="'nav'">
+          <el-breadcrumb-item to="customer/{{proid}}" ><i class="fa fa-commenting-o"></i>客服</el-breadcrumb-item>
+          <el-breadcrumb-item to="" ><i class="fa fa-phone"></i>电话</el-breadcrumb-item>
+          <el-breadcrumb-item to="car" ><i class="fa fa-shopping-cart"></i>购物车</el-breadcrumb-item>
+        </el-breadcrumb>
+        <div class="buttongroup">
+            <span id="addcar" (click)="addcar()">加入购物车</span>
+            <span id="buynow" (click)="buynow()">立即购买</span>
+        </div> 
+    </div>  
+
+</div>
+<spinner *ngIf="isshow"></spinner>

@@ -1,0 +1,20 @@
+<div id="qcollect">
+    <head>
+        <a routerLink="/mine">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>我的收藏</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <p class="nothing">空空如也~</p>
+        <div class="qall" *ngFor='let obj of arrgoods'>
+            <a [routerLink]="'/detail/'+obj.goodMsg.id"><img src="{{obj.goodMsg.img.split(',')[0]}}" alt="" /></a>
+            <a [routerLink]="'/detail/'+obj.goodMsg.id"><div class="qall-r" >
+                <p class="qall-name">{{obj.goodMsg.materials}}</p>
+                <p class="qall-pay">￥{{obj.goodMsg.price}}</p>
+            </div></a>
+            <div (click)="cancelcollect(obj.id)" class="qall-cancel">取消收藏</div>
+        </div>
+    </main>
+</div>

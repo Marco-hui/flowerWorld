@@ -1,0 +1,50 @@
+*{box-sizing:border-box;}
+html,body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,form,input,label{
+    margin: 0;padding: 0;
+}
+
+ul,ol,li{list-style: none;}
+a{text-decoration: none;color: #333;}
+i,span{display: inline-block;}
+img{border:0 none;display: block;}
+select, input { vertical-align:middle;}
+
+/*文本框禁止拖动*/
+textarea{ resize:none; } 
+
+table { border-collapse:collapse;}
+
+/*去除高亮*/
+input,button,select,textarea{outline-style:none;} 
+
+/*表单占位符样式*/
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #AEAEAE;
+    font-size:0.426667rem;
+}
+
+/*清除浮动*/
+.clfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+    zoom: 1; 
+}
+
+/*做浮动右浮动*/
+.fl{float:left;}
+.fr{float:right;}
+
+/*居中*/
+.locate{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+
+ html,body{height: 100%;}

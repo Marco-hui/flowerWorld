@@ -1,0 +1,30 @@
+<div id="qnewaddress">
+    <head>
+        <a routerLink="/mine/muser/maddress">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>收货人信息填写</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <div class="qall">
+            <p class="qtips"></p>
+            <div class="qname">
+                <label for="name">收货人姓名：</label>
+                <input type="text" id="name" [(ngModel)]="name" />
+            </div>
+            <div class="qphone">
+                <label for="phone">收货人手机：</label>
+                <input type="text" id="phone" [(ngModel)]="phone" (blur)="suremsg()" />
+            </div>
+            <div class="qaddress">
+                <input type="text"  />
+            </div>
+            <div class="qaddress-xx">
+                <span>详细地址：</span>
+                <textarea name="" id="" cols="35" rows="5" [(ngModel)]="address" (blur)="suremsg()" ></textarea>
+            </div>
+        </div>
+        <button (click)="newaddress()" >确认保存</button>
+    </main>
+</div>

@@ -1,0 +1,54 @@
+<div id="Mcar">
+    <div class="header">
+        <i class="el-icon-arrow-left" (click)="goToBack($event)"></i>
+        <h4>购物车</h4>
+        <i class="el-icon-menu" (click)="showFooter($event)"></i>
+    </div>
+    <footer *ngIf="footer_show"></footer>
+    <div class="main">
+        <div class="goodslist">
+            <div *ngIf='dataset.length == 0' class="empty">
+                <img src="//img02.hua.com/m/empty_cart3.png" style="max-width:512px;" class="img">
+                <p class="cart_text">别让你的心意空空如也...</p>
+                <a routerLink="/" class="gohome">去挑选礼物</a>
+            </div>
+            <ul  *ngIf='dataset.length > 0'>
+                <li class="clfix" *ngFor="let obj of dataset" trackBy:byName>
+                    <div class="checkbox">
+                        <input type="checkbox" class="locate" [checked]="obj.checked" (click)="changeChecked($event,obj.id)">
+                    </div>
+                    <div class="img"><a [routerLink]="'/detail/'+obj.goodMsg.id"><img [src]="obj.img" class="locate"/></a></div>
+                    <div class="content">
+                        <p class="name"><a [routerLink]="'/detail/'+obj.goodMsg.id">{{obj.goodMsg.flowerName}}</a></p>
+                        <span class="explain"><a [routerLink]="'/detail/'+obj.goodMsg.id">{{obj.goodMsg.explain}}</a></span>
+                        <div class="price">
+                            <span class="fl">￥{{obj.goodMsg.price}}</span>
+                            <span class="del fr" (click)="delGood(obj.id)">删除</span>
+                            <div class="qty fr"><span class="sub" (click)="changeQty($event,obj.id,obj.qty,'sub')">-</span><input type="number" [(ngModel)]="obj.qty" (blur)="changeQty($event,obj.id,1,'input')"/><span class="add" (click)="changeQty($event,obj.id,obj.qty,'add')">+</span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="other">
+            <p class="tit">为您推荐</p>
+            <div class="otherList">
+                <ul *ngIf="reDataset" class="clfix">
+                    <li *ngFor="let obj of reDataset" trackBy:byName >
+                        <a [routerLink]="'/detail/'+obj.id">
+                            <img [src]="obj.img.split(',')[0]"/>
+                            <p>{{obj.flowerName}}</p>
+                            <span>￥{{obj.price}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="submit">
+        <p class="fl">合计：<span>{{total | currency:'￥'}}</span></p>
+        <button class="jiesuan fr" (click)="goToAccount($event)">去结算({{count}})</button>
+    </div>
+    <div class="hint locate"></div>
+</div>
+<router-outlet></router-outlet>

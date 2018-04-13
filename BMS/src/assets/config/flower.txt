@@ -1,0 +1,3 @@
+{
+    "cols":"flowerName,type,florid,price,oprice,materials,username,password,nickname,admin,pass"
+}

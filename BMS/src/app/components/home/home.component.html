@@ -1,0 +1,52 @@
+<div id="home">
+    <div class="lcheader">
+        <h3>花店网后台管理</h3>
+       <!--  <div class="headimg">
+            <form id='uploadform' >  
+                <input type="file" name="head" class="upload"/>  
+            </form>
+            <img src='' alt="" />
+            <button class='headupload'>上传头像</button>
+        </div> -->
+        <div class="user">
+            <span>当前用户&nbsp;&nbsp;</span>
+            <h5></h5>
+            <a id="exit" (click)="exit()">&nbsp;&nbsp;退出</a>
+        </div>
+    </div>
+    <div class="lcbody">
+        <div class="lcnav" >
+            <ul>
+                <li class="lcli" (click)="liclick($event)">商品管理(commodity)
+                    <div class="aaa">
+                        <ul class="ab" (click)="subclass($event)">
+                            <li class="lcli lcli_1" data-kind="all">全部商品(All)</li>
+                            <li class="lcli lcli_1" data-kind="t1">鲜花(flower)</li>
+                            <li class="lcli lcli_1" data-kind="t2">永生花(preserved)</li>
+                            <li class="lcli lcli_1" data-kind="t3">商务花(businessflower)</li>
+                            <li class="lcli lcli_1" data-kind="t4">金箔(goldleaf)</li>
+                            <li class="lcli lcli_1" data-kind="t5">蛋糕(cake)</li>
+                            <li class="lcli lcli_1" data-kind="t6">特色礼品(Special present)</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="lcli"  (click)="liclick($event)">账号管理(account)
+                    <div class="aaa">
+                        <ul class="ab" (click)="acct($event)">
+                            <li class="lcli lcli_1" data-kind="yh">用户(user)</li>
+                            <li class="lcli lcli_1" data-kind="gly">管理员(admin)</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="lcli">商品采购(purchase)</li>
+                <li class="lcli">订单管理(indent)</li>
+            </ul>
+        </div>
+        <div class="lccontainer">
+            <div class="tablelist">
+               <product [dataset]="dataset" [columns]="columns"  [kindClass] = "kindClass" [pageNum]="pageNum"  [qty]="qty"  [allClass]="allClass" *ngIf="bbbbb"></product>
+               <account [admindataset]="admindataset" [columns]="columns" *ngIf="ccccc"></account>
+            </div>
+        </div>
+    </div>
+</div>

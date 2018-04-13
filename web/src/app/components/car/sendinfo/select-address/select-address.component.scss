@@ -1,0 +1,43 @@
+#MselectAddress{
+    position: absolute;background: #fff;display:flex;flex-direction:column;font-size:0.48rem;
+    left: 0;top: 0;bottom: 0;right: 0;
+    .header{
+        height: 1.173333rem;display:flex;text-align: center;line-height: 1.173333rem;border-bottom: 1px solid #999;
+        i{width:1.173333rem; line-height: 1.173333rem;font-size:0.533333rem;}
+        h4{flex:1;}
+    }
+    .add{
+        padding: 0.48rem 0.266667rem;
+        button{width: 100%;height: 0.96rem;border:2px solid #f60;font-size:0.373333rem;color:#f60;background: #fff;}
+    }
+    .main{
+        background: #eee;flex:1;overflow: auto;padding-bottom: 0.533333rem;
+        ul{
+            li{
+            background: #fff;padding: 0.266667rem;border-top:1px solid #ccc;border-bottom:1px solid #ccc;color:#666;margin-top: 0.4rem;
+                .top{
+                    padding:0.266667rem 0;border-bottom: 2px dashed #666;
+                    p.name{
+                        font-size:0.426667rem;margin-bottom: 0.133333rem;
+                        span{margin-right: 0.266667rem;}
+                    }
+                    p.address{
+                        font-size:0.373333rem;color:#777;
+                        span.default{padding: 0.053333rem;margin-right: 0.133333rem;background: #f60;color:#fff;border-radius:0.08rem;font-size:0.32rem;}
+                    }
+                    i.el-icon-check{width: 0.906667rem;height: 0.906667rem;text-align: center;line-height: 0.906667rem;color:#f60;font-size:0.666667rem;margin-right: 0.266667rem;}
+                }
+                .bottom{
+                    padding-top: 0.133333rem;
+                    i{font-size:0.533333rem;color:#999;margin-right: 0.533333rem;}
+                    button{padding: 0.08rem;font-size:0.32rem;border:0 none;border-radius:0.133333rem;background: #f60;color:#fff;}
+                }
+            }
+            &.selected li{
+                border-color: #f60;border-width:0.053333rem;
+                div.right{max-width:7.733333rem;}
+                div.top{border-bottom: 0 none;}
+            }
+        }   
+    }
+}

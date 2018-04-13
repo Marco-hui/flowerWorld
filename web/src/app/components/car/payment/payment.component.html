@@ -1,0 +1,47 @@
+<div id="Mpayment">
+    <div class="header">
+        <i class="el-icon-arrow-left" (click)="goToBack($event)"></i>
+        <h4>花花世界付款</h4>
+        <a routerLink="/mine/mpayorder">查看订单</a>
+    </div>
+    <div class="nav">
+        <p><label>订单号：</label><span>{{'58bc58'}}</span></p>
+        <p><label>金额：</label><span>{{total | currency:"￥"}}</span></p>
+    </div>
+    <div class="main">
+        <ul>
+            <li class="clfix">
+                <img src="//img02.hua.com/m/weixinzf.png" class="fl" />
+                <div class="fl">
+                    <p class="p1">微信支付</p>
+                    <p class="p2">微信安全支付</p>
+                </div>
+                <i class="fr el-icon-arrow-right"></i>
+            </li>
+            <li class="clfix">
+                <img src="//img02.hua.com/m/zhifub.png" class="fl" />
+                <div class="fl">
+                    <p class="p1">支付宝支付</p>
+                    <p class="p2">支付宝余额及银行卡支付，有卡就能付</p>
+                </div>
+                <i class="fr el-icon-arrow-right"></i>
+            </li>
+            <li class="clfix">
+                <img src="//img02.hua.com/m/ppzf.png" class="fl" />
+                <div class="fl">
+                    <p class="p1">PayPal支付</p>
+                    <p class="p2">支持PayPal余额支付、VISA、Master、AE卡等</p>
+                </div>
+                <i class="fr el-icon-arrow-right"></i>
+            </li>
+            <li class="clfix">
+                <img src="//img02.hua.com/m/lpk.png" class="fl" />
+                <div class="fl">
+                    <p class="p1">礼品卡支付</p>
+                    <p class="p2">使用礼品卡支付</p>
+                </div>
+                <i class="fr el-icon-arrow-right"></i>
+            </li>
+        </ul>
+    </div>
+</div>

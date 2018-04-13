@@ -1,0 +1,46 @@
+<div id="qmsg">
+     <head>
+        <a routerLink="/mine/muser">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>个人信息管理</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <div class="qall">
+            <div class="qheadimg" *ngIf="headImg">
+                <img [src]="http.baseUrl+headImg" class="fl"/>
+                <i class="el-icon-arrow-right fr"></i>
+                <form id="uploadFile">
+                    <input type="file" name="head" (change)="updateHead($event)"/>
+                </form>
+            </div>
+            <div class="qname">
+                <label for="name">昵称：</label>
+                <input type="text" id="name" [(ngModel)]="nickname" />
+            </div>
+            <div class="qname">
+                <label for="name">性别：</label>
+                <input type="checkbox" id="name" class="qman" (click)="choosegender($event)"/><span>男</span>
+                <input type="checkbox" id="name" class="qwomen" (click)="choosegender($event)"/><span>女</span>
+            </div>
+            <div class="qname">
+                <label for="name">生日：</label>
+                <select name="" id="qy" [(ngModel)]="y">
+                </select>
+                年
+                <select name="" id="qm" [(ngModel)]="m" >
+                </select>
+                月
+                <select name="" id="qd" [(ngModel)]="d" >
+                </select>
+                日
+            </div>
+            <div class="qname">
+                <label for="name">电子邮箱：</label>
+                <input type="text" id="name" [(ngModel)]="email" />
+            </div>
+        </div>
+        <button (click)="updatamsg()" >确认修改</button>
+    </main>
+</div>

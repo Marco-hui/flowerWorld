@@ -1,0 +1,35 @@
+<div id="qlogin">
+    <head>
+        <a routerLink="/mine">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>欢迎登陆</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <input type="text" placeholder="请输入手机号码" class="qphone" />
+        <input type="password" placeholder="请输入登陆密码" class="qpsw" />
+        <input type="checkbox" id="remember" />
+        <label for="remember">一个月内免登录</label>
+        <div>
+            <button (click)="dl()">登陆</button>    
+        </div>
+        <div class="qfindback">
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <a routerLink="/register">快速注册</a>
+        </div>
+        <div class="qother">
+            <h1 class="locate"></h1>
+            <span class="locate">其他登录方式</span>
+            <div class="qtx">
+                <i></i>
+                <p>QQ</p>
+            </div>
+            <div class="qzfb">
+                <i></i>
+                <p>支付宝</p>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</div>

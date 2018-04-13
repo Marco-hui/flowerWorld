@@ -1,0 +1,16 @@
+<div id="orderman">
+    <div class="header">
+        <i class="el-icon-arrow-left" (click)="goToBack($event)"></i>
+        <h4>订购人信息填写</h4>
+        <i></i>
+    </div>
+    <div class="main">
+        <div class="form">
+            <p class="clfix"><label class="fl">您的姓名：</label><input type="text" class="fl" [(ngModel)]="user.nickname" name="nickname" /></p>
+            <p class="clfix"><label class="fl">您的手机：</label><input type="text" class="fl" [(ngModel)]="user.username" name="phone" #phone/></p>
+            <p class="clfix"><label class="fl">您的Email：</label><input type="text" class="fl" [(ngModel)]="user.email" name="email" /></p>
+            <button (click)="goToBack($event,phone)">确认保存</button>
+        </div>
+    </div>
+    <div class="hint locate"></div>
+</div>

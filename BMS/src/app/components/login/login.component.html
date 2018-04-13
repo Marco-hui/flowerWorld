@@ -1,0 +1,40 @@
+<div id="logining">
+   <div id="adminlogin">
+       <div class="loginBox locate">
+           <div class="logo"></div>
+           <h1>花网后台管理系统</h1>
+           <div class="loginMain">
+               <table  cellSpacing="0" cellPadding="0">
+               <tbody>
+                   <tr>
+                       <td class="title">用户名：</td>
+                       <td><input type="text" class="form-control txt" id="user"/></td>
+                   </tr>
+                   <tr>
+                       <td class="title">密   码：</td>
+                       <td><input type="password" class="form-control txt" id="pwd"/></td>
+                   </tr>
+                   <tr>
+                       <td class="title">验证码：</td>
+                       <td><input type="text" class="form-control txt txt2" id="yz"/><span class="yzm" (click)="auth()"></span></td>
+                   </tr>
+                   <tr class="errortd" ref="errortd">
+                       <td>&nbsp;</td>
+                       <td><i class="ico-error"></i><span class="errorword"></span></td>
+                   </tr>        
+                   <tr class="opt">
+                       <td>&nbsp;</td>
+                       <td><button id="btnlogin" (click)="enter()">登录</button><button id="btnreset">重置</button></td>
+                   </tr>        
+                   <tr class="forget">
+                       <td>&nbsp;</td><td class="forgetpsw"><a class="fr">忘记密码？</a></td>
+                   </tr> 
+                   </tbody>  
+               </table>
+
+               <div class="footer">Copyright &copy; 2018-2019 part-time job  All Rights Reserved</div>
+           </div>
+       </div>
+   </div>
+</div>
+

@@ -1,0 +1,50 @@
+<div id="lclist" (scroll)="ceil($event)" style="overflow-y:auto" onScroll>
+	<div class="header">
+		<a href="javascript:history.go(-1)"><i class="fa fa-angle-left"></i></a>
+		<img src="https://img02.hua.com/m/icon/logo@2x.png" *ngIf="kind.startsWith('t')">
+		<span *ngIf="!kind.startsWith('t')">{{kind}}</span>
+		<i class="fa fa-bars" (click)="show()"></i>
+	</div>
+	<footer *ngIf="showfooter"></footer>
+	
+	<ul class="nav" (click)="filter($event,li1,li3)">
+		<li #li1 class="lcactive">综合</li>
+		<li>销量</li>
+		<li #li3>价格</li>
+		<!-- <li *ngIf="order=='desc'">价格▽</li> -->
+		<li>最新</li>
+	</ul>
+
+	<div class="fixed-nav" *ngIf="dataset.length>0" (click)="goto($event,li3)">
+		<a class="lcnavactive">全部</a>
+		<ng-template ngFor let-key let-idx='index' [ngForOf]="allkinds">
+			<a *ngIf="idx<3" class="key">{{key}}</a>
+		</ng-template>
+		<!-- <a>爱情鲜花</a>
+		<a>友情鲜花</a> -->
+		<a (click)="toItems()">{{type(dataset[0].biglistnameid)}}分类<i class="fa fa-caret-right"></i></a>
+	</div>
+
+	<div class="prolist">
+		<ul>
+			<!-- <ng-template ngFor let-obj let-idx='index' [ngForOf]="dataset" >
+				<span *ngIf="idx<4">{{obj.price}}{{idx}}</span>
+			</ng-template> -->
+			<li *ngFor="let obj of dataset;let idx='index';trackBy:trackByName" class="li">
+				<a [routerLink]="'/detail/'+obj.id">
+					<img src="../../../../assets/config/listload.gif" [attr.data-imgload]="'https://'+obj.img.split(',')[0]" imgload>
+					<div class="pro_txt">
+						<p class="pro_name">{{obj.flowerName.slice(0,obj.flowerName.indexOf('-')-1)}}<span class="explain">{{obj.explain}}</span></p>
+						<p class="pro_detail">{{obj.materials}}</p>
+						<p class="pro_price">￥{{obj.price}}</p>
+					</div>
+				</a> 
+			</li>	
+		</ul>
+		<!-- <div class="more"><a (click)="loadMore()">加载更多</a></div> -->
+	</div>
+
+	<div class="gotopBtn" xiaoke>
+		<i class="fa fa-arrow-circle-o-up"></i>
+	</div>
+</div>

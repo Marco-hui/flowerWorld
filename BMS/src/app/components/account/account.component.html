@@ -1,0 +1,67 @@
+<div class="products_box" style="margin-top:60px">
+    <table class="products" *ngIf ="admindataset && columns">
+        <thead class="pro">
+            <tr *ngIf="admindataset['data']">
+                <th>
+                    <input type="checkbox" />
+                </th>
+                <!-- <th *ngFor = "let key of getKeys(admindataset['data'][0])">{{key}}</th> -->
+                <ng-template ngFor let-key [ngForOf]="getKeys(admindataset['data'][0])" >
+                    <th *ngIf="columns.indexOf(key) > -1">{{key}}</th> 
+                </ng-template>
+                <th class="doSoming" *ngIf ="admindataset['data'][0]['admin']">
+                    <a  (click)="adduser()">添加管理员</a>
+                    <!-- <a>批量删除</a> -->
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of admindataset['data']" [id]="item.id">
+                <td >
+                   <input type="checkbox"/>
+                </td>
+                <!-- <td *ngFor = "let key of getKeys(item)">{{item[key]}}</td> -->
+                <ng-template ngFor let-key [ngForOf]="getKeys(item)">
+                    <td *ngIf="columns.indexOf(key) > -1">{{item[key]}}</td> 
+                </ng-template>
+                <td *ngIf ="admindataset['data'][0]['admin']">
+                    <input type="button" value="修改密码" (click)="revamp($event)"/>
+                    <input type="button" value="删除"  (click)="removeuser($event)"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="hkshade_box">
+        <div class="hkshade"></div>
+        <div class="attr">
+            <h3>添加管理员</h3>
+            <br>
+            <td>用户：<input type="text" id="addname"/></td>
+            <br>
+            <td>密码：<input type="text" id="addpasss"/></td>
+            <br>
+            <td>
+                <input type="button" value="确认" (click)="affirm()" class="btn btn1" />
+                <input type="button" value="取消" (click)="cancel()" class="btn"/>
+            </td>
+        </div>
+    </div>
+    <div class="hkshade_box1">
+        <div class="hkshade"></div>
+        <div class="attr">
+            <h3>修改密码</h3>
+            <br>
+            <td>新密码：<input type="text" id="newpasss"/></td>
+            <br>
+            <td>
+                <input type="button" value="确认" (click)="affirm_m()" class="btn btn1" />
+                <input type="button" value="取消" (click)="cancel_m()" class="btn"/>
+            </td>
+        </div>
+    </div>
+    
+    <div class="page">
+        <span ></span>
+    </div>
+
+  </div>

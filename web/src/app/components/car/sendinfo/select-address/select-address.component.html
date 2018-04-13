@@ -1,0 +1,37 @@
+<div id="MselectAddress">
+    <div class="header">
+        <i class="el-icon-arrow-left" (click)="goToBack($event)"></i>
+        <h4>收货人地址管理</h4>
+        <i></i>
+    </div>
+    <div class="add" (click)="showEditConsignee($event)">
+        <button>+ 添加收货地址</button>
+    </div>
+    <edit-consignee *ngIf="com.editConsignee_show" (updateSelected)="updateSelected($event)" [consigOneMsg]="consigOneMsg"></edit-consignee>
+    <div class="main">
+        <ul class="selected" *ngIf="selectedConsig">
+            <li>
+                <div class="top clfix">
+                    <i class="el-icon-check fl"></i>
+                    <div class="fl right">
+                        <p class="name"><span>{{selectedConsig.consigName}}</span><span>{{selectedConsig.consigTel}}</span></p>
+                        <p class="address">{{selectedConsig.consigAddress}}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="addressList" *ngIf="consigDataset">
+            <li *ngFor="let obj of consigDataset" trackBy:byName>
+                <div class="top clfix" (click)="selectAddress(obj)">
+                    <p  class="name"><span>{{obj.consigName}}</span><span>{{obj.consigTel}}</span></p>
+                    <p class="address"><span *ngIf="obj.defaults" class="default">默认</span> {{obj.consigAddress}}</p>
+                </div>
+                <div class="bottom clfix">
+                    <button *ngIf="obj.defaults != 1" class="fr" (click)="updateAddress(obj.id,1)">设为默认</button>
+                    <i *ngIf="obj.defaults != 1" class="el-icon-delete fr" (click)="delAddress($event,obj.id)"></i>
+                    <i class="el-icon-edit fr" (click)="showEditConsignee($event,obj)"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+.qbanner1{
+    margin-bottom: 0.226667rem;
+    display: flex;
+    .qbanner1-item{
+        background: #fff;
+        flex: 1;
+        text-align: center;
+        position: relative;
+        box-sizing: border-box;
+        p{
+            font-size: 0.32rem;
+            margin-bottom: 0.266667rem;
+        }
+        i{
+            font-size: 0.613333rem;
+        }
+    }
+}
+.qbanner2{
+    overflow: hidden;
+    ul{
+
+        li{
+            background: #fff;
+            float: left;
+            width: 25%;
+            text-align: center;
+            height: 2.48rem;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            a{
+                display: inline-block;
+                i{
+                    margin-top: 0.266667rem;
+                    display: inline-block;
+                    width: 1.066667rem;
+                    height: 1.066667rem;
+                }
+                p{
+                    font-size: 0.32rem;
+                    line-height: 0.533333rem;
+                }                     
+            }
+        }
+        li:nth-of-type(1) i{
+            background: url('../imgs/iconPcTicket@2x.png') no-repeat;
+            background-size: 1.066667rem;
+        }
+        li:nth-of-type(2) i{
+            background: url('../imgs/iconPcIntegral@2x.png') no-repeat;
+            background-size: 1.066667rem;
+        }
+        li:nth-of-type(3) i{
+            background: url('../imgs/iconClock@2x.png') no-repeat;
+            background-size: 1.066667rem;
+        }
+        li:nth-of-type(4) i{
+            background: url('../imgs/iconCollectDefault@2x.png') no-repeat;
+            background-size: 1.066667rem;
+        }
+        li:nth-of-type(5) i{
+            background: url('../imgs/iconPcPay@2x.png') no-repeat;
+            background-size: 1.066667rem;
+        }
+        li:nth-of-type(6) i{
+            background: url('../imgs/bottomIconSeviceDefault@2x.png') no-repeat;
+            background-size: 1.066667rem;
+        }
+        li:nth-of-type(7) i{
+            background: url('../imgs/iconHelp@2x.png') no-repeat;
+            background-size: 1.066667rem;
+        }
+        li:nth-of-type(8) i{
+            background: url('../imgs/iconAbout@2x.png') no-repeat;
+            background-size: 1.066667rem;
+        }
+    }
+}
+.qaddress{
+    height: 1.066667rem;
+    line-height: 1.066667rem;
+    background: #fff;
+    padding: 0 0.426667rem;
+    margin-top: 0.266667rem;
+    span{
+        font-size: 0.37rem;
+        float: left;
+    }
+    div{
+        height: 1.066667rem;
+        line-height: 1.066667rem;
+        display: inline-block;
+        float: right;
+        a{
+            display: block;
+            height: 1.066667rem;
+            line-height: 1.066667rem;
+            font-size: 0.30rem;
+        }
+    }
+}
+.qmain-b{
+    height: 2.506667rem;
+    background: url('../imgs/banner@2x.png') no-repeat;
+    margin-top: 0.266667rem;
+}

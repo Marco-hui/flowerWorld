@@ -1,0 +1,27 @@
+<div id="edit-consignee">
+    <div class="header">
+        <i class="el-icon-arrow-left" (click)="goToBack($event)"></i>
+        <h4>收货人信息填写</h4>
+        <i></i>
+    </div>
+    <div class="main">
+        <div class="form">
+            <div class="clfix"><label class="fl">收货人姓名：</label><input type="text" class="fl" #consigneeName [value]="consigOneMsg.consigName || ''"/></div>
+            <div class="clfix"><label class="fl">收货人手机：</label><input type="tel" class="fl" #tel [value]="consigOneMsg.consigTel || ''"/></div>
+            <div class="clfix">
+                <label class="fl">省市区/县：</label>
+                <form class="fl region">
+                    <select name="province" id="province" #province></select>
+                    <select name="city" id="city" #city></select>
+                    <select name="county" id="county" #county></select>
+                </form>
+            </div>
+            <div class="details">
+                <label>详细地址：</label>
+                <textarea placeholder="请输入详细地址" #details></textarea>
+            </div>
+            <button (click)="submitMsg(consigneeName,tel,province,city,county,details)">确认保存</button>
+        </div>
+    </div>
+    <div class="hint locate"></div>
+</div>

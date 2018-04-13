@@ -1,0 +1,15 @@
+注意事项：
+
+1、引入了base.css，写代码前先浏览一下base.css，合理利用里面定义的类及样式。
+2、引入了font-awesome，可在官网（http://www.fontawesome.com.cn/faicons/）直接查找图标使用
+3、引入了element-angular，可在官网（https://element-angular.faas.ele.me/basic/layout）查看使用方法
+4、使用了rem布局，rem设置37.5
+5、编写好了footer导航组件，直接在自己的主组件中引入使用即可，不用自己去写。
+6、spinner已经在app.component.html中引入，其状态也已经放到了全局，不需要再在每个组件引入spinner,只需在ajax请求时改变全局里对应的show状态值就行。
+7、请在自己的每个组件中设置一个根元素，元素设置id,id名加上自己的标识，样式文件最好更换成 .scss，这样可以把属于你这个组件的样式都写在你的根元素里，才可有效防止组件之间的样式冲突。
+8、连接数据库：10.3.136.155
+9、后端接口每人一个文件，每一个接口请加上自己的标识，以免和别人冲突
+11、使用SVN版本管理工具，注意设置过滤文件 node_modules
+12、安装了jquery，可在.ts文件中直接引入使用：import * as $ from 'jquery'
+13、封装了httpclient，直接在.ts引入，发起ajax请求时使用
+14、创建了common.service公共服务，全局变量可以定义在里面，供全局使用

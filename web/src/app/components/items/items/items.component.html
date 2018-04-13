@@ -1,0 +1,29 @@
+<div id="lcitems">
+	<div class="top_header">
+		<div class="input_box">
+			<input type="text" placeholder="搜索鲜花、蛋糕、礼品" (input)="showicondel($event)" class="inputsearch" #keyword autofocus>
+			<i class="fa fa-search" (click)="searchkey(keyword)"></i>
+			<i class="fa fa-times" (click)="del($event)"></i>
+		</div>
+	</div>
+	<div class="categories clearfix">
+		<div class="left_list fl" (click)="selectItem($event)">
+			<ul>
+				<li data-kind="hot" class="lcactive">热门推荐</li>
+				<li data-kind="t1">鲜花</li>
+				<li data-kind="t2">永生花</li>
+				<li data-kind="t3">商务花</li>
+				<li data-kind="t4">金箔花</li>
+				<li data-kind="t5">蛋糕</li>
+				<li data-kind="t6">特色礼品</li>
+			</ul>
+		</div>
+		<div class="right_main fr">
+			<lccategories [dataset]="dataset" [ishot]="ishot" [banner_img]="banner_img" [kind]="kind"></lccategories>
+		</div>
+	</div>
+	<div class="lcfooter">
+		<footer></footer>
+	</div>
+</div>
+

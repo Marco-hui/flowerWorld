@@ -1,0 +1,100 @@
+
+<div class="products_box">
+    <div class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" />
+        <button class="btn my-sm-0" type="submit" (click)="btnsearch()">搜索</button>
+    </div>
+    <table class="products" *ngIf ="dataset && columns">
+        <thead class="pro">
+            <tr *ngIf="dataset['data']">
+                <th>
+                    <input type="checkbox" />
+                </th>
+                <ng-template ngFor let-key [ngForOf]="getKeys(dataset['data'][0])">
+                    <th *ngIf="columns.indexOf(key) > -1">{{key}}</th> 
+                </ng-template>
+                <th class="doSoming">
+                    <a (click)="OnAddgoods()">添加商品</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of dataset['data']" [id]="item.id">
+                <td >
+                   <input type="checkbox"  />
+                </td>
+                <ng-template ngFor let-key [ngForOf]="getKeys(item)">
+                    <td *ngIf="columns.indexOf(key) > -1">{{item[key]}}</td> 
+                </ng-template>
+                <td>
+                    <input type="button" value="修改" (click)="revgoods($event)"/>
+                    <input type="button" value="删除" (click)="delgoods($event)" class="del" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="hkshade_box1">
+        <div class="hkshade"></div>
+        <div class="attr attrInput">
+            <h3>添加商品</h3>
+            <br>
+            <td>商品名称：<input type="text" id="goodsName" class="gooodsinput" /></td>
+            <br>
+            <td>商品类型：<input type="text" id="goodsType" class="gooodsinput" /></td>
+            <br>
+            <td>商品分类：<input type="text" id="goodsClass" class="gooodsinput" placeholder="请输入价格（数字）"/></td>
+            <br>
+            <td>商品现价：<input type="text" id="goodsPrice" class="gooodsinput" placeholder="请输入价格（数字）"/></td>
+            <br>
+            <td>出&nbsp;厂&nbsp;价&nbsp;：<input type="text" id="goodsOprice" class="gooodsinput" placeholder="请输入价格（数字）"/></td>
+            <br>
+            <td>商品图片：
+                <form id="uploadForm">  
+                 <input type="file" name="msgImg" multiple (change)="uploading($event)" id="pic" class="gooodsinput"/>
+                 </form>
+            </td>
+            <br>
+            <td>商品大类：<input type="text" id="goodsTypeid" class="gooodsinput" /></td>
+            <br>
+                  <td>
+                <input type="button" value="确认" (click)="goodsAdd()" class="btn btn1" />
+                <input type="button" value="取消" (click)="goodsAddhide()" class="btn"/>
+            </td>
+        </div>
+    </div>
+    <div class="hkshade_box2">
+        <div class="hkshade"></div>
+        <div class="attr attrInput"  *ngFor= "let arr of rexgoods">
+            <h3>修改商品</h3>
+            <br>
+            <td>商品名称：<input type="text" id="xName" class="gooodsinput" value="{{arr.flowerName}}" /></td>
+            <br>
+            <td>商品类型：<input type="text" id="xType" class="gooodsinput" value="{{arr.type}}"/></td>
+            <br>
+            <td>商品分类：<input type="text" id="xClass" class="gooodsinput" placeholder="请输入（数字）" value="{{arr.typeid}}"/></td>
+            <br>
+            <td>商品现价：<input type="text" id="xPrice" class="gooodsinput" placeholder="请输入价格（数字）" value="{{arr.price}}"/></td>
+            <br>
+            <td>出&nbsp;厂&nbsp;价&nbsp;：<input type="text" id="xOprice" class="gooodsinput" placeholder="请输入价格（数字）" value="{{arr.oprice}}"/></td>
+            <br>
+            <td>商品图片：
+                <form id="uploadForml">  
+                 <input type="file" name="msgImg" multiple (change)="upload($event)" id="pic" class="gooodsinput" />
+                 <input type="text" value="{{arr.img}}" id="chaneImg"/>
+                 </form>
+            </td>
+            <br>
+            <td>商品大类：<input type="text" id="xTypeid" class="gooodsinput" value="{{arr.biglistnameid}}"/></td>
+            <br>
+                  <td>
+                <input type="button" value="确认" (click)="revConfirm()" class="btn btn1" />
+                <input type="button" value="取消" (click)="revAddhide()" class="btn"/>
+            </td>
+        </div>
+    </div>
+    <div class="page">
+        <span *ngFor= "let item of pages" (click)="Onpages($event)" [class.highlight]="pag==item">{{item}}</span>
+    </div>
+
+  </div>
+

@@ -1,0 +1,36 @@
+<div id="ct_customer">
+    <div class = 'header'>
+        <h2>花花世界——国际鲜花网</h2>
+        <span (click)="goback()"><i class="fa fa-angle-left"></i> 返回</span>  
+    </div>
+    <p class="phone"><i class="fa fa-bullhorn"></i> 客服中心电话：4008898188</p>
+    <div class="datagrid">
+        <ul class="clearfix">
+            <li class="anwser">
+                <div class="imgbox"><img src="../../../../assets/7.jpg"/></div>
+                <div class="mes">
+                    <span class="c_name">订花顾问-花花</span>
+                    <p class="c_mes">欢迎光临花花世界，我是您的一对一专属订花顾问【花花】，很荣幸为您服务。我们提供很多精美的鲜花、蛋糕、礼品款式，适用于各类送礼场景，请告诉我您的需求，我为您推荐~ </p>
+                </div>
+            </li>
+            <li>
+                <div class="pro fl">
+                    <div class="imgbox fl">
+                        <img src={{imgurl}} alt="" />
+                    </div>
+                    <div class="des fl" *ngIf="dataset.id">
+                        <p class="proname">{{dataset.flowerName}}</p>
+                        <p class="promaterial">{{dataset.type}}-{{dataset.materials}}</p>
+                        <p class="proprise">{{dataset.price}}元</p>
+                        <span class='send'(mouseup)="sendapi()">发送</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="foot">
+        <input type="text" placeholder="请反馈您的问题" (keyup)="onKey($event)" [(ngModel)]="questions" />
+        <i class="fa fa-smile-o"></i>
+        <i class="fa fa-paper-plane-o" (mouseup)="send()"></i>
+    </div>
+</div>

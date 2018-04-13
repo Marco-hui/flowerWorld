@@ -1,0 +1,25 @@
+<div id="qallorder">
+    <head>
+        <a routerLink="/mine">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>全部订单</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <p class="nothing">空空如也~</p>
+        <div class="qall">
+            <div *ngFor='let obj of arrgoods' class="qall-g" >
+                <div class="qall-g-t">                      
+                    <img src="{{obj.goodImg}}" alt="" />
+                    <div>
+                        <p class="qall-msg">收货人：{{obj.guestbook}}</p>
+                        <p class="qall-total">订单金额：{{obj.total}} 元</p>
+                        <p>配送时间：{{obj.deliveryDate}}</p>
+                        <p>订单状态：已付款</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

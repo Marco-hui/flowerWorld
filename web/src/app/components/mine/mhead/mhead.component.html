@@ -1,0 +1,18 @@
+<div class="qback"> 
+    <a routerLink="">
+        <i class="fa fa-angle-left"></i>
+    </a>
+</div>
+<div class="qcenter" *ngIf="show">
+    <h6>Hi,欢迎来到花礼网</h6>
+    <div class="qcenter-b">
+        <a routerLink="/login">登录/注册</a>
+    </div>
+</div>
+<div class="qcenter-log" *ngIf="show2">
+    <img src="{{headimg}}" alt="" />
+    <div class="qcenter-log-msg">
+        <p class="qcenter-log-msg-name">{{nickname}}</p>
+        <p>普通会员</p>
+    </div>    
+</div>

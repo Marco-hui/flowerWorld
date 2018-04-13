@@ -1,0 +1,49 @@
+<div id="lclist" style="overflow-y:auto" onScroll>
+	<div class="header">
+		<a href="javascript:history.go(-1)"><i class="fa fa-angle-left"></i></a>
+		<span>搜索结果</span>
+		<i class="fa fa-bars" (click)="show()"></i>
+	</div>
+
+	<footer *ngIf="showfooter"></footer>
+
+	<div class="search">
+		<input type="text" placeholder="请输入关键字" #input>
+		<i class="fa fa-search" (click)="searchkey(input)"></i>
+	</div>
+
+	<div class="tabs">
+		<p><span>"{{keyword}}"</span>搜索结果列表（共找到<i>{{rowscount}}</i>个商品）</p>
+	</div>
+
+	<div class="prolist">
+		<ul>
+			<li *ngFor="let obj of dataset;trackBy:trackByName">
+				<a [routerLink]="'/detail/'+obj.id">
+					<img src="../../../../assets/config/listload.gif" [attr.data-imgload]="'https://'+obj.img.split(',')[0]" imgload>
+					<div class="pro_txt">
+						<p class="pro_name">{{obj.flowerName.slice(0,obj.flowerName.indexOf('-')-1)}}<span class="explain">{{obj.explain}}</span></p>
+						<p class="pro_detail">{{obj.materials}}</p>
+						<p class="pro_price">￥{{obj.price}}</p>
+					</div>
+				</a>
+			</li>
+			<!-- <li>
+				<img src="https://img01.hua.com/uploadpic/newpic/9012244.jpg_220x240.jpg">
+				<div class="pro_txt">
+					<p class="pro_name">黑玫瑰
+						<span class="explain">特别优惠</span>
+					</p>
+					<p class="pro_detail">555</p>
+					<p class="pro_price">￥555</p>
+				</div>
+			</li> -->
+
+		</ul>
+	</div>
+
+	<div class="gotopBtn" xiaoke>
+		<i class="fa fa-arrow-circle-o-up"></i>
+	</div>
+
+</div>

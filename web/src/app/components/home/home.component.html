@@ -1,0 +1,181 @@
+<div id="Chome">
+	<header class="header">
+        <img class="logo" src="https://img02.hua.com/m/icon/logo@2x.png">
+        <div class="header-right">
+            <a routerLink="/items" class="search"><span class="icon-search"></span>白羊座鲜花</a>
+            <div class="login">
+                <a routerLink="/login" (click)="logout($event)"></a>
+            </div>
+        </div></header>
+      	<div class="main">
+		 	<div class="swiper-container">
+			    <div class="swiper-wrapper">
+					<div class="swiper-slide">
+		    			<img src="//img02.hua.com/slider/18_youflower_m.jpg">
+					</div>
+					<div class="swiper-slide">
+						<img src="//img02.hua.com/slider/17_yga_m.jpg">
+					</div>
+					<div class="swiper-slide">
+						<img src="//img02.hua.com/slider/18_byz_m.jpg">
+					</div>
+			    </div>
+			    <div class="swiper-pagination">
+			    	<span class="swiper-pagination-bullet"></span>
+			    	<span class="swiper-pagination-bullet"></span>
+			    </div></div>
+			<div class="conpany-info">
+		            <ul>
+		                <li>●认证龙头企业</li>
+		                <li>●13年品牌</li>
+		                <li>●3小时送花</li>
+		                <li>●最近<a href="/productpj/" id="pjCount">246326</a>条好评</li>
+		            </ul></div>
+		    <div class="pro-cate">
+		        <ul>
+		            <li (click)="jump($event)"><a id="flowers1"><span class="icon-flower"></span><p>鲜花</p></a></li>
+		            <li (click)="jump($event)"><a id="flowers2"><span class="icon-ysh"></span><p>永生花</p></a></li>
+		            <li (click)="jump($event)"><a id="flowers3"><span class="icon-cake"></span><p>蛋糕</p></a></li>
+		            <li (click)="jump($event)"><a id="flowers4"><span class="icon-gifts"></span><p>礼品</p></a></li>
+		            <li (click)="jump($event)"><a id="flowers5"><span class="icon-chocolates"></span><p>巧克力</p></a></li>
+		        </ul></div>
+			<div class="flower-cate">
+	            <ul>
+	                <li (click)="jump($event)" ><a id="cflowers1"><span class="icon icon-flowerlove"></span><p>爱情鲜花</p></a></li>
+	                <li (click)="jump($event)" ><a id="cflowers2"><span class="icon icon-flowerfriend"></span><p>友情鲜花</p></a></li>
+	                <li (click)="jump($event)" ><a id="cflowers3"><span class="icon icon-flowerparent"></span><p>送情人鲜花</p></a></li>
+	                <li (click)="jump($event)" ><a id="cflowers4"><span class="icon icon-flowerbusniess"></span><p>商务鲜花</p></a></li>
+	            </ul></div>
+	        <div class="main-data">
+	        	<div class="modular">
+		        	<div class="title">
+		                <div class="title-line"></div>
+		                <p class="title-name">鲜花精选</p>
+		            </div>
+		            <article class="product-list" *ngIf="dataset">
+		                <ul >
+		                    <li *ngFor="let obj of dataset" (click)="goods($event)">
+		                        <div class="pro-item">
+		                            <a [id]="obj.id">
+		                                <img [src]="obj.img">
+		                                <div class="pro-info">
+		                                    <p class="name">{{obj.name}}</p>
+		                                    <p class="detail">{{obj.pst}}</p>
+		                                    <p class="price">￥{{obj.price}}</p>
+		                                </div>
+		                            </a>
+		                        </div>
+		                    </li>
+		                </ul>
+		            </article>
+		            <div class="product-more">
+		            	<a href="" class="product-more-btn">
+		            		更多爱情鲜花
+		            	</a>
+		            </div>
+		        </div>
+		        <div class="modular">
+		        	<div class="title">
+		                <div class="title-line"></div>
+		                <p class="title-name">永生花精选</p>
+		            </div>
+		            <article class="product-list" *ngIf="dataset2" >
+		                <ul >
+		                    <li *ngFor="let obj of dataset2" (click)="goods($event)">
+		                        <div class="pro-item">
+		                            <a [id]="obj.id">
+		                                <img [src]="obj.img">
+		                                <div class="pro-info">
+		                                    <p class="name">{{obj.name}}</p>
+		                                    <p class="detail">{{obj.pst}}</p>
+		                                    <p class="price">￥{{obj.price}}</p>
+		                                </div>
+		                            </a>
+		                        </div>
+		                    </li>
+		                </ul>
+		            </article>
+		            <div class="product-more">
+		            	<a href="" class="product-more-btn">
+		            		更多永生花
+		            	</a>
+		            </div>
+		        </div>
+		        <div class="modular">
+		        	<div class="title">
+		                <div class="title-line"></div>
+		                <p class="title-name">礼品精选</p>
+		            </div>
+		            <article class="product-list" *ngIf="dataset3" >
+		                <ul >
+		                    <li *ngFor="let obj of dataset3" (click)="goods($event)">
+		                        <div class="pro-item">
+		                            <a [id]="obj.id">
+		                                <img [src]="obj.img">
+		                                <div class="pro-info">
+		                                    <p class="name">{{obj.name}}</p>
+		                                    <p class="detail">{{obj.pst}}</p>
+		                                    <p class="price">￥{{obj.price}}</p>
+		                                </div>
+		                            </a>
+		                        </div>
+		                    </li>
+		                </ul>
+		            </article>
+		            <div class="product-more">
+		            	<a href="" class="product-more-btn">
+		            		更多礼品
+		            	</a>
+		            </div>
+		        </div>
+		        <div class="modular">
+		        	<div class="title">
+		                <div class="title-line"></div>
+		                <p class="title-name">蛋糕精选</p>
+		            </div>
+		            <article class="product-list" *ngIf="dataset4">
+		                <ul >
+		                    <li *ngFor="let obj of dataset4" (click)="goods($event)">
+		                        <div class="pro-item">
+		                            <a [id]="obj.id">
+		                                <img [src]="obj.img">
+		                                <div class="pro-info">
+		                                    <p class="name">{{obj.name}}</p>
+		                                    <p class="detail">{{obj.pst}}</p>
+		                                    <p class="price">￥{{obj.price}}</p>
+		                                </div>
+		                            </a>
+		                        </div>
+		                    </li>
+		                </ul>
+		            </article>
+		            <div class="product-more">
+		            	<a href="" class="product-more-btn">
+		            		更多蛋糕巧克力
+		            	</a>
+		            </div>
+		        </div>
+		        <div class="business" style="padding: 0;">
+			        <a href="/profile/about.htm"><img src="https://img02.hua.com/m/home/img/m-brand.png"></a>
+			    </div>
+			    <div class="bottom">
+			        <ul class="nav">
+			            <li><a href="/huayu/">花语大全</a></li>
+			            <li><a href="/Ordercx/Index/">查单</a></li>
+			            <li><a href="/profile/about.htm">关于我们</a></li>
+			        </ul>
+			        <ul class="entrance">
+			            <li><a href="/mbzzy/" rel="nofollow"><span class="icon-phone"></span></a></li>
+			            <li><a routerLink="/customer/ " class="kefu" rel="nofollow"><span class="icon-kefu"></span></a></li>
+			        </ul>
+			        <p class="copyright">Copyright © 2005~2018 花礼网(中国鲜花礼品网) 版权所有<br>中国鲜花网领先品牌，鲜花速递专家！</p>
+			    </div>
+	        </div>
+		</div>
+		<div class="float-btn" (click)="goTop($event)" xiaoke>
+		    <a class="icon-arrow-top show" data-action="goTop"  xiaoke>
+		    	<img src="//img02.hua.com/m/icon/arrow_Top.png">
+		    </a>
+		</div>
+    <footer class="footer"></footer>
+</div>

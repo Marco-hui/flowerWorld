@@ -1,0 +1,30 @@
+<div id="qregister">
+    <head>
+        <a routerLink="/login">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>注册新用户</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <nav>
+            <a href="javascript:void(0)">手机注册</a>
+            <a href="javascript:void(0)">邮箱注册</a>
+        </nav>
+        <p class="qtips">
+
+        </p>
+        <input type="text" placeholder="请输入7-11位的手机号码" class="qphone" (blur)="changevalue()" />
+        <input type="password" placeholder="密码以字母开头，6-18位，只能包含字符、数字和下划线" class="qpsw" (blur)="changevalue()"/>
+        <input type="password" placeholder="请确认密码" class="qpsw2" (blur)="changevalue()"/>
+        <div class="qsj">
+            <input type="text" placeholder="请输入验证码" (blur)="changevalue()" />
+            <span (click)="changeNum()"></span>
+        </div>
+        <div class="qmeg">
+            <input type="text" placeholder="请输入短信验证码" (blur)="changevalue()"/>
+            <button (click)="takeNum()">获取短信验证码</button>
+        </div>
+        <button class="qzc" (click)="zc()">注册</button>
+    </main>
+</div>

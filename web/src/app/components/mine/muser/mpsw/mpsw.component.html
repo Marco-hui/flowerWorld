@@ -1,0 +1,18 @@
+<div id="qpsw">
+    <head>
+        <a routerLink="/mine/muser">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>修改密码</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <div>
+            <p class="qtips"></p>
+            <input type="password" class="qoldpsw" placeholder="您的旧密码" [(ngModel)]="oldpsw" (blur)="changepsw()"/>
+            <input type="password" class="qnewpsw" placeholder="您的新密码" [(ngModel)]="newpsw1" (blur)="changepsw()"/>
+            <input type="password" class="qnewpsw2" placeholder="确认新密码" [(ngModel)]="newpsw2" (blur)="changepsw()" />
+            <button (click)="updatapsw()">确认修改</button>       
+        </div>
+    </main>
+</div>

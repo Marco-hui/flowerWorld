@@ -1,0 +1,60 @@
+<div class="lcsort">
+	<div class="top_bannner">
+		<img [src]="banner_img">
+		<div class="lcmask"></div>
+	</div>
+
+	<div class="product" *ngIf="!ishot && dataset.length!=0 ">
+		<p class="title">{{dataset[0].biglistname}}
+			<a class="fr">{{dataset[0].biglistname}}排行榜&nbsp;></a>
+		</p>
+		<div class="pro_list">
+			<ul>
+				<li (click)="tolist(span)">
+					<img src="../../../../assets/config/imgload.gif" data-imgload="https://img02.hua.com/m/icon/more_btn.png" imgload>
+					<span #span>全部</span>
+				</li>
+				<li *ngFor="let obj of dataset;trackBy:trackByName" (click)="tolist(span)">
+					<!-- <img [src]="'https://'+obj.listImg" imgload> -->
+					<img src="../../../../assets/config/imgload.gif" imgload [attr.data-imgload]="'https:'+obj.listImg">
+					<span #span>{{obj.listname}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="product" *ngIf="ishot">
+		<p class="title">
+			大家都在找
+		</p>
+		<div class="pro_list">
+			<ul (click)="toall($event)">
+				<li>
+					<img src="../../../../assets/config/imgload.gif" data-imgload="https://img02.hua.com/app/api/flower/huacai/rose.png" imgload>
+					<span>鲜花</span>
+				</li>
+				<li>
+					<img src="../../../../assets/config/imgload.gif" data-imgload="https://img02.hua.com/app/api/use/yongshenghua.png" imgload>
+					<span>永生花</span>
+				</li>
+				<li>
+					<img src="../../../../assets/config/imgload.gif" data-imgload="https://img02.hua.com/app/api/flower/yongtu/kaiye.png" imgload>
+					<span>商务花</span>
+				</li>
+				<li>
+					<img src="../../../../assets/config/imgload.gif" data-imgload="https://img01.hua.com/uploadpic/newpic/1061006.jpg" imgload>
+					<span>金箔花</span>
+				</li>
+				<li>
+					<img src="../../../../assets/config/imgload.gif" data-imgload="https://img02.hua.com/app/api/use/dangao.png" imgload>
+					<span>蛋糕</span>
+				</li>
+				<li>
+					<img src="../../../../assets/config/imgload.gif" data-imgload="https://img02.hua.com/app/api/use/lipin.png" imgload>
+					<span>特色礼品</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>

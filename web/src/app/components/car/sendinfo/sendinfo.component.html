@@ -1,0 +1,62 @@
+<div id="MsendInfo">
+    <div class="header">
+        <i class="el-icon-arrow-left" (click)="goToBack($event)"></i>
+        <h4>填写订单</h4>
+        <i></i>
+    </div>
+    <div class="main" *ngIf="user">
+        <div class="step step1">
+            <a routerLink="/car/selAddress">
+                <b></b>
+                <a class="s-href" *ngIf="consig">
+                    <div class="mt clfix">
+                        <span class="s-name fl">收货人：</span>
+                        <div class="s1-name fl"><i class="fa fa-user-circle-o"></i><span>{{consig.consigName}}</span></div>
+                        <div class="s1-phone fl"><i class="fa fa-mobile "></i>{{consig.consigTel}}</div>
+                        <i class="fr el-icon-arrow-right"></i>
+                    </div>
+                    <div class="mb">{{consig.consigAddress}}</div>
+                </a>
+                <a class="s-href" *ngIf="!consig">
+                    <i class="el-icon-plus"></i>
+                    <span class="el-select">选择收货地址</span>
+                </a>
+                <b></b>
+            </a>
+        </div>
+        <div class="step step2 clfix" (click)="showOrderman($event)">
+            <span class="s-name fl">您的：</span>
+            <div class="s1-name fl"><i class="fa fa-user-circle-o"></i><span>{{user.nickname}}</span></div>
+            <div class="s1-phone fl"><i class="fa fa-mobile "></i>{{user.username}}</div>
+            <i class="fr el-icon-arrow-right"></i>
+        </div>
+        <orderman [user]="user" *ngIf="com.orderman_show"></orderman>
+        <div class="step step3 clfix">
+            <span class="fl">送达日期</span>
+            <i class="fr el-icon-arrow-right"></i>
+            <input type="date" class="fr" id="dates"/>
+        </div>
+        <div class="step step4">
+            <span>贺卡留言<b>（选填）</b></span>
+            <textarea placeholder="请输入留言" id="guestbook"></textarea>
+        </div>
+        <div class="step step5 clfix">
+            <span class="fl">优惠券</span>
+            <i class="fr el-icon-arrow-right"></i>
+            <span class="fr">无可用</span>
+        </div>
+        <div class="step step6 clfix">
+            <span class="fl">备注/发票<b>（选填）</b></span>
+            <i class="fr el-icon-arrow-right"></i>
+        </div>
+        <div class="step step7 clfix">
+            <span class="fl">商品金额</span>
+            <span class="fr">{{orderDataset.total | currency:'￥'}}</span>
+        </div>
+    </div>
+    <div class="submit">
+        <p class="fl">实付款：<span> {{orderDataset.total | currency:'￥'}}</span></p>
+        <button class="jiesuan fr" (click)="goToAccount($event)">去结算</button>
+    </div>
+    <div class="hint locate"></div>
+</div>

@@ -1,0 +1,70 @@
+#MsendInfo{
+    position: absolute;left: 0;top: 0;right: 0;bottom: 0;background: #fff;display:flex;flex-direction:column;font-size:0.48rem;
+    .header{
+        height: 1.173333rem;display:flex;text-align: center;line-height: 1.173333rem;border-bottom: 1px solid #999;
+        i{width:1.173333rem; line-height: 1.173333rem;font-size:0.533333rem;}
+        h4{flex:1;}
+    }
+    .main{
+        flex:1;background: #eee;
+        .step{
+            background: #fff;padding: 0.5rem 0.32rem;font-size:0.373333rem;border-bottom:0.026667rem solid #ccc;
+            span{color:#666;}
+            i.el-icon-arrow-right{margin-top: 0.08rem;}
+            &.step1{
+                padding: 0.4rem 0;border:0 none;margin: 0;
+                b{display: block;width: 100%;height: 0.08rem;background: url('//img02.hua.com/images/sh_bj.png') repeat-x scroll 0% 0% / 1.706667rem 0.08rem;}
+                a.s-href{
+                    display: block;padding: 0.32rem;
+                    .mt{
+                        font-size:0.373333rem;
+                        span.s-name{color:#666;}
+                        i{color:#F60;margin-right: 0.133333rem;}
+                        i.fa-mobile{font-size:0.533333rem;vertical-align: middle;}
+                        .s1-name{margin-right: 0.8rem;}
+                        .s1-phone{line-height: 0.533333rem;vertical-align: middle;}
+                    }
+                    .mb{font-size:0.32rem;color:#666;}
+                    .el-icon-plus{margin-left: 2.5rem;margin-right: 0.533333rem;font-size:0.533333rem;}
+                    .el-select{font-size:0.533333rem;}
+                }
+            }
+            &.step2{
+                font-size:0.373333rem;border-top:0.026667rem solid #999;
+                span.s-name{color:#666;}
+                i{color:#666;margin-right: 0.133333rem;}
+                i.fa-mobile{font-size:0.533333rem;vertical-align: middle;}
+                .s1-name{margin-right: 0.8rem;}
+                .s1-phone{line-height: 0.533333rem;vertical-align: middle;}
+            }
+            &.step3{
+                input{width: 3.2rem;height: 0.533333rem;border:0 none;font-size:0.373333rem;color:#999;}
+            }
+            &.step4{
+                span{
+                    display: block;margin-bottom: 0.266667rem;
+                    b{font-size:0.32rem;color:#ccc;}
+                }
+                textarea{width: 100%;height: 2.133333rem;border:0 none;font-size:0.266667rem;color:#666;}
+            }
+            &.step5{
+                span.fr{margin-right: 0.266667rem;}
+            }
+            &.step6{
+                b{font-size:0.32rem;color:#ccc;}
+            }
+            &.step7{
+                span.fr{color:#f60;}
+            }
+        }
+    }
+    .submit{
+        height: 1.333333rem;
+        p{
+            padding-left: 0.64rem;line-height:1.333333rem; font-size:0.373333rem;
+            span{color:#f60;}
+        }
+        button.jiesuan{width: 3.306667rem;height: 1.333333rem;border:0 none;background: #f60;color:#fff;text-align: center;line-height:1.333333rem;font-size:0.426667rem;}
+    }
+    .hint{background: rgba(0,0,0,.5);font-size:0.373333rem;color:#fff;padding: 0.2rem;border-radius:0.533333rem;max-width:10.666667rem;display: none;}
+}

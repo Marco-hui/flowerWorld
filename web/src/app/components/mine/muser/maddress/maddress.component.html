@@ -1,0 +1,25 @@
+<div id="qaddress">
+    <head>
+        <a routerLink="/mine/muser">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>收货人地址管理</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <div class="qadd">
+            <a class="locate"  routerLink="/mine/muser/maddress/mnewaddress" >
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <span>添加收货人地址</span>
+            </a>
+        </div>
+        <div class="qshowaddress">
+            <div class="qconsigmsg" *ngFor="let obj of arraddress">
+                <p class="qconsig">收货地址：{{obj.consigAddress}}</p>
+                <p class="qconsigphone">联系方式：{{obj.consigTel}}</p>
+                <p class="qconsigname">收货人：{{obj.consigName}}</p>
+                <button (click)="deladdress(obj)">删除</button>
+            </div>
+        </div>
+    </main>
+</div>

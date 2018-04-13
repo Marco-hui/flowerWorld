@@ -1,0 +1,26 @@
+#Mpayment{
+    position: absolute;left: 0;top: 0;right: 0;bottom: 0;background: #fff;display:flex;flex-direction:column;font-size:0.48rem;
+    .header{
+        height: 1.173333rem;display:flex;text-align: center;line-height: 1.173333rem;border-bottom: 1px solid #999;
+        i{width:1.173333rem; line-height: 1.173333rem;font-size:0.533333rem;}
+        a{line-height: 1.173333rem;font-size:0.346667rem;padding: 0 0.4rem;}
+        h4{flex:1;}
+    }
+    .nav{
+        display:flex;height: 1.333333rem;border-bottom: 1px solid #ccc;
+        p{
+            flex:1;font-size:0.4rem;display:flex;justify-content:center;align-items:center;
+            span{color:#f60;}
+        }
+    }
+    .main{
+        li{
+            padding:0.266667rem 0.4rem;font-size:0.373333rem;border-bottom: 1px solid #ccc;
+            img{margin-right: 0.266667rem;}
+            p{line-height: 0.533333rem;max-width:6.666667rem;}
+            .p1{font-size:0.4rem;}
+            .p2{font-size:0.346667rem;margin-top: 0.133333rem;}
+            i{margin-top: 0.533333rem;}
+        }
+    }
+}

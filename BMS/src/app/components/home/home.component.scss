@@ -1,0 +1,58 @@
+*{margin: 0; padding: 0;}
+.lcheader{width: 100%; height: 90px;background: #00B38B;position:relative;
+    border-bottom:3px solid #fff;
+    h3{text-align:center;line-height:90px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#fff;font-family:sans-serif;}
+    .headimg{
+        display: inline-block;
+        // position: relative;
+        margin: 8px 0 0 54px;
+        img{
+            width:70px;
+            height:70px;
+            border-radius: 50%;
+        }
+        .headupload{
+            position: absolute;
+            top:50%;
+            left:150px;
+            transform:translateY(-50%)
+
+        }
+    }
+    .user{float:right;position: absolute;top:50%;transform:translateY(-50%);right:0;
+        color:#000;
+        h5{display:inline-block;color:orange;font-size:18px;}
+        span{font-size:16px;}
+        a{margin-right:50px;cursor: pointer;}
+    }
+    
+}
+.lcbody{position: fixed; top: 90px; left: 0; right: 0; bottom: 0;}
+.lcbody .lcnav{position: absolute; left: 0; width: 220px; top: 0; bottom: 0;background:#797979;overflow: auto;
+    li{cursor: pointer;text-align:center;font-size:14px;padding:17px 0;
+        color:#fff;
+        font-family: 'Ruda', sans-serif;
+        border-bottom:3px solid #fff;
+        &:hover{color:#fff;}
+        .aaa{
+            margin-top:20px;
+            display:none;
+            .ab{
+                border-top: 3px solid #fff;
+                .lcli_1{
+                    background:#00B38B;
+                }
+                .highlight{
+                    background:red;
+                }
+            }
+        }
+    }
+
+}
+.lcbody .lccontainer{position: absolute; left: 220px; top: 0; right: 0; bottom: 0;overflow-y:auto;background: url("assets/img/login.jpg");
+    padding: 5px 30px;
+
+    .tablelist{
+    }
+}

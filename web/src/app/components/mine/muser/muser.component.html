@@ -1,0 +1,28 @@
+<div id="qmuser">
+    <head>
+        <a routerLink="/mine">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        <p>账户管理</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </head>
+    <main>
+        <div class="qmoney">
+            <p><a routerLink="/mine/muser/mmoney">余额</a></p>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+        <div class="quser">
+            <p><a routerLink="/mine/muser/mmsg">个人资料管理</a></p>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+        <div class="qaddress">
+            <p><a routerLink="/car/selAddress">收货地址管理</a></p>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+        <div class="qpsw">
+            <p><a routerLink="/mine/muser/mpsw">修改密码</a></p>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+        <button class="qgoout" (click)="goback()">退出</button>
+    </main>
+</div>

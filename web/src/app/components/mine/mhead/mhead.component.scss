@@ -1,0 +1,67 @@
+.qback{
+    position: absolute;
+    top: 0px;
+    height: 1.173333rem;
+    width: 100%;
+    .fa{
+        font-size: 0.8rem;
+        padding: 0.266667rem 0.133333rem 0.133333rem 0.373333rem;
+        color: #fff;
+        font-weight: normal;
+    }
+}
+.qcenter{
+    text-align: center;
+    margin-top: 0.88rem;
+    font-size: 0.653333rem;
+    color: #fff;
+    h6{
+        margin: 0;
+        font-weight: normal;
+    }
+    .qcenter-b{
+
+        a{
+            display: inline-block;
+            font-size: 0.373333rem;
+            color: #fff;
+            height: 0.7rem;
+            line-height: 0.7rem;
+            width: 3.133333rem;
+            border-radius: 0.32rem;
+            letter-spacing: 0.053333rem;
+            background: #fe6600;
+        }
+    }
+}
+.qcenter-log{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.88rem;
+    font-size: 0.653333rem;
+    color: #fff;
+    img{
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        border: 0.026667rem solid #ccc;
+        margin: 0 0.266667rem;
+    }
+    .qcenter-log-msg{
+        font-size: 0.373333rem;
+        p:nth-child(2){
+            background: url('../imgs/iconDiamond@2x.png') 5px center no-repeat #f56200;
+            width: 2.133333rem;
+            margin-top: 0.133333rem;
+            padding-left: 0.266667rem;
+            border-radius: 0.213333rem;
+            font-size: 0.32rem;
+        }
+        .qcenter-log-msg-name{
+            height: 0.8rem;
+            line-height: 0.8rem;
+        }
+    }   
+}  

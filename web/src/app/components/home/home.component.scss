@@ -1,0 +1,394 @@
+@import './components/css/swiper.min.css';
+#Chome{
+	display:-webkit-box;  
+    -webkit-box-orient:vertical;  
+    height:100%;
+    background: #eee;
+	.header {
+	    padding: 0.16rem 0 0.16rem 0.426667rem;
+	    background: transparent;
+	    width: 100%;
+	    max-width: 17.066667rem;
+	    background-color: #fff;
+	    .logo {
+		    float: left;
+		    width: 1.866667rem;
+		    height: 0.426667rem;
+		    padding: 0.16rem 0;
+		    box-sizing: content-box;
+		}
+		.header-right {
+		    margin-left: 2.293333rem;
+		    height: 100%;
+		    .search {
+			    float: left;
+			    width: 76%;
+			    max-width: 12.266667rem;
+			    height:0.746667rem;
+			    line-height: 0.746667rem;
+			    background-color: #f5f5f5;
+			    border-radius: 0.133333rem;
+			    font-size: 0.32rem;
+			    line-height:0.72rem;
+			}
+			a {
+			    text-decoration: none;
+			    color: #494949;
+			    -webkit-tap-highlight-color: transparent;
+			    outline: none;
+			    -webkit-focus-ring-color: transparent;
+			     .icon-search {
+				    display: inline-block;
+				    width: 0.32rem;
+				    height: 0.32rem;
+				    background: url(//img02.hua.com/m/icon/icon_Search.png) no-repeat center center;
+				    background-size: 0.64rem 0.64rem;
+				    opacity: 0.5;
+				    vertical-align: middle;
+				    margin: 0 0.213333rem;
+				}
+			}
+			.login {
+			    float: left;
+			    font-size: 0.32rem;
+			    width: 24%;
+			    text-align: center;
+			    height: 0.746667rem;
+			    line-height: 0.746667rem;
+			    overflow: hidden;
+			    a {
+				    color: #494949;
+				}
+			}
+		}
+	}
+	.main{
+		height: 86%;    
+	    overflow:auto;  
+	    
+
+		.swiper-container {
+	      width: 100%;
+	      height: 4.8rem;
+			.swiper-slide {
+		      text-align: center;
+		      font-size: 0.48rem;
+		      background: #ccc;
+		      display: -webkit-box;
+		      display: -ms-flexbox;
+		      display: -webkit-flex;
+		      display: flex;
+		      -webkit-box-pack: center;
+		      -ms-flex-pack: center;
+		      -webkit-justify-content: center;
+		      justify-content: center;
+		      -webkit-box-align: center;
+		      -ms-flex-align: center;
+		      -webkit-align-items: center;
+		      align-items: center;
+		      img{
+		      	height: 100%;
+		      }
+				
+		    }
+		    .swiper-pagination-bullet {
+			    width: 0.213333rem;
+			    height: 0.213333rem;
+			    display: inline-block;
+			    border-radius: 100%;
+			    background: #000;
+			    opacity: .2;
+			}
+	    }
+	    .conpany-info {
+		    background: #fff;
+		     ul {
+			    font-size: 0.266667rem;
+			    overflow: hidden;
+			    height: 0.746667rem;
+			    line-height: 0.746667rem;
+			    color: #989292;
+			    li {
+				    float: left;
+				    width: 25%;
+				    text-align: center;
+				    font-size: 0.326667rem;
+				}
+			}
+		}
+		.pro-cate {
+		   background: #fff;
+		    padding: 0.213333rem 0;
+		    margin-top: 0.026667rem;
+		    height:2.346667rem;
+		    li {
+			    float: left;
+			    width: 20%;
+			    text-align: center;
+			    
+			    a {
+			    	
+				    display: block;
+				    text-decoration: none;
+				    color: #494949;
+				    -webkit-tap-highlight-color: transparent;
+				    outline: none;
+				    width:100%;
+				    height: 100%;
+				    p {
+				    	font-size: 0.32rem;
+					}
+				    .icon-flower {
+					    background-image: url(//img02.hua.com/m/icon/xianhua_icon.png);
+					}
+					.icon-ysh {
+					    background-image: url(//img02.hua.com/m/icon/yongshenghua_icon.png);
+					}
+					.icon-cake {
+					    background-image: url(//img02.hua.com/m/icon/cake_icon.png);
+					}
+					.icon-gifts {
+					    background-image: url(//img02.hua.com/m/icon/gift_icon.png);
+					}
+					.icon-chocolates {
+					    background-image: url(//img02.hua.com/m/icon/choclate_icon.png);
+					}
+					span{
+						display: inline-block;
+					    width: 1.28rem;
+					    height: 1.28rem;
+					    background-repeat: no-repeat;
+					    background-position: center center;
+					    background-size: contain;
+					}
+				}
+			}	
+		}
+		.flower-cate {
+		    border-top: 0.026667rem solid #eee;
+		    background-color: #fff;
+		    padding: 0.213333rem 0;
+			ul {
+				display: flex;
+				li {
+				    float: left;
+				    width: 25%;
+				    flex: 1 1 25%;
+				    text-align: center;
+				    font-size: 0.32rem;
+				    border-left: 1px solid #eee;
+				    a {
+					    text-decoration: none;
+					    color: #494949;
+					    -webkit-tap-highlight-color: transparent;
+					    outline: none;
+					    -webkit-focus-ring-color: transparent;
+					    p{
+					    	border: 0;
+						    padding: 0;
+						    margin: 0;
+						    box-sizing: border-box;
+						}
+					    .icon {
+						    display: inline-block;
+						    width: 1.386667rem;
+						    height: 1.386667rem;
+						    background-repeat: no-repeat;
+						    background-position: center center;
+						    background-size: contain;
+						}
+						.icon-flowerlove {
+						    background: url(https://img02.hua.com/m/icon/cate-love.png) no-repeat center center;
+						}
+						.icon-flowerfriend {
+						    background: url(https://img02.hua.com/m/icon/cate-friend.png) no-repeat center center;
+						}
+						.icon-flowerparent {
+						    background: url(https://img02.hua.com/m/icon/cate-parent.png) no-repeat center center;
+						}
+						.icon-flowerbusniess {
+						    background: url(https://img02.hua.com/m/icon/cate-business.png) no-repeat center center;
+						}
+					}
+				}
+			}
+		}
+		.main-data{
+			background: #fff;
+		    margin-top: 0.213333rem;
+		    overflow: auto;	
+			.modular {
+				border-top: 0.213333rem solid #eee;
+			    .title {
+				    height: 1.2rem;
+				    overflow: hidden;	
+				    .title-line {
+					    width: 4.266667rem;
+					    height: 0.026667rem;
+					    background: #bbb;
+					    transform: translateY(0.586667rem);
+					    margin: 0 auto;
+					}
+					.title-name {
+					    width: 2.4rem;
+					    text-align: center;
+					    background-color: #fff;
+					    font-size: 0.426667rem;
+					    color: #222;
+					    margin: 0 auto;
+					    position: relative;
+					    line-height: 1.173333rem;
+
+					}
+				}
+				.product-list ul {
+	    			padding: -0.026667rem 0.113333rem;
+	    			overflow: auto;
+	    
+					li {
+					    float: left;
+					    width: 50%;
+					    background: #fff;
+					    margin-bottom:0.106667rem;
+
+					    .pro-item {
+						    border: 0.026667rem solid #efefef;
+						    padding: 0.106667rem;
+						    border-radius:0.16rem;
+						    a {
+							    text-decoration: none;
+							    color: #494949;
+							    -webkit-tap-highlight-color: transparent;
+							    outline: none;
+							    img {
+								    width: 100%;
+								    vertical-align: top;
+								    background-image: url(./components/img/5-121204193951.gif);
+								}
+								.pro-info {
+								    padding: 0.16rem 0.053333rem;
+								    font-size: 0.32rem;
+								    .name {
+									    color: #232323;
+									    text-overflow: clip;
+									    white-space: nowrap;
+									    overflow: hidden;
+									}
+									.detail {
+									    color: #777;
+									    font-size: 0.266667rem;
+									    line-height: 0.32rem;
+									    text-overflow: ellipsis;
+									    white-space: nowrap;
+									    overflow: hidden;
+									}
+									.price {
+									    color: #222;
+									}
+								}
+							}
+						}
+					}
+				}
+				.product-more {
+				    
+				    .product-more-btn {
+					    display: block;
+					    height: 1.066667rem;
+					    line-height: 1.066667rem;
+					    color: #9B9B9B;
+					    font-size: 0.32rem;
+					    text-align: center;
+					}
+				}
+			}
+			.business {
+			    background: #fff;
+			    border-top: 0.213333rem solid #eee;
+			}
+			.bottom {
+			    background: #fff;
+			    margin: 1.213333rem 0 1.28rem;
+			    border-top: 0.266667rem solid #eee;
+			    .nav {
+				    padding: 0.426667rem 0;
+				    overflow: auto;
+				    li {
+					    float: left;
+					    width: 33.33333333%;
+					    text-align: center;
+					    a {
+						    display: inline-block;
+						    padding: 0.106667rem 0.506667rem;
+						    background: #eee;
+						    color: #444;
+						    font-size: 0.32rem;
+						    border-radius: 0.053333rem;
+						}
+					}
+				}
+				.entrance {
+				    padding: 0.373333rem 10%;
+				    border-top: 0.026667rem solid #eee;
+				    overflow: auto;
+				    li {
+					    float: left;
+					    width: 50%;
+					    text-align: center;
+					    a {
+						    text-decoration: none;
+						    color: #494949;
+						    -webkit-tap-highlight-color: transparent;
+						    outline: none;
+						    .icon-phone {
+							    background-image: url(//img02.hua.com/m/icon/icon-phonenew.png);
+							    background-size: contain;
+							    width: 1.013333rem;
+							    height: 1.573333rem;
+							}
+							.icon-kefu {
+							    background-image: url(//img02.hua.com/m/icon/icon-kefu.png);
+							    background-size: contain;
+							    width: 1.013333rem;
+							    height: 1.573333rem;
+							}
+						}
+					}
+				}
+				.copyright {
+				    border-top: 0.026667rem solid #eee;
+				    font-size: 0.266667rem;
+				    text-align: center;
+				    color: #ccc;
+				    padding: 0.426667rem 0;
+				}
+			}
+			
+		}
+
+	}
+	.float-btn {
+			    position: fixed;
+			    right: 0.4rem;
+			    bottom: 1.866667rem;
+			    border-radius: 1.333333rem;
+			    z-index: 999;
+				height: 0.866667rem;
+				width: 0.866667rem;
+				border: 0.03333rem solid #291c1c;
+				background: #efdfdf;
+				opacity: 0.5;
+			    .show {
+				    display: block;
+				    line-height: 0px;
+				    img{
+				    	width: 100%;
+				    }
+				}
+			}
+	.footer{
+		height: 8%;
+		display: block;  
+	}
+}
+

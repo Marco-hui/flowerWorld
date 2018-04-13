@@ -1,0 +1,67 @@
+#Mcar{
+    height: 100%;display:flex;flex-direction:column;font-size:0.48rem;
+    .header{
+        height: 1.173333rem;display:flex;text-align: center;line-height: 1.173333rem;border-bottom: 1px solid #999;
+        i{width:1.173333rem; line-height: 1.173333rem;font-size:0.533333rem;}
+        h4{flex:1;}
+    }
+    .main{
+        flex:1;overflow: auto;background: #eee;
+        .goodslist{
+            background: #fff;margin-bottom: 0.4rem;
+            div.empty{
+                padding: 0.533333rem 0;
+                img{margin: 0 auto;}
+                p{text-align: center;line-height: 1.066667rem;font-size:0.373333rem;}
+                a{margin: 0 auto;width: 2.666667rem;height: 1.066667rem;line-height: 1.066667rem;border:1px solid #f60;color:#f60;font-size:0.32rem;text-align: center;display: block;}
+            }
+            ul li{
+                padding: 0.32rem;display:flex;border-bottom: 0.026667rem solid #ccc;
+                .checkbox{
+                    width: 0.933333rem;position: relative;
+                    input{width: 0.35rem;height: 0.35rem;}
+                }
+                div.img{
+                    width: 2.266667rem;position: relative;
+                    img{width: 2.266667rem;}
+                }
+                .content{
+                    flex:1;font-size:0.373333rem;padding-left:0.426667rem;
+                    .name{margin-bottom: 0.133333rem;}
+                    .explain{font-size:0.32rem;color:#f60;margin-bottom: 0.533333rem;}
+                    .price{
+                        span.fl{color:#f60;}
+                        span.del{color:#666;margin-left: 0.533333rem;}
+                        .qty{
+                            border:1px solid #999;text-align: center;
+                            span{width: 0.64rem;height: 0.586667rem;}
+                            input{width: 0.8rem;height: 0.586667rem;border:0 none;text-align: center;font-size:0.32rem;}
+                        }
+                    }
+                }
+            }
+        }
+        .other{
+            padding: 0.266667rem;background: #fff;
+            p.tit{font-size:0.373333rem;color:#f60;margin-bottom: 0.266667rem;}
+            .otherList{
+                width: 100%;overflow-x: auto;
+                ul li{
+                    float: left;font-size:0.32rem;width: 2.133333rem;margin-right: 0.266667rem;
+                    img{width: 2.133333rem;height: 2.266667rem;}
+                    p{ overflow: hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom: 0.133333rem;}
+                    span{display: block;color:#f60;text-align: center;}
+                }
+            }
+        }
+    }
+    .submit{
+        height: 1.333333rem;
+        p{
+            padding-left: 0.64rem;line-height:1.333333rem;font-size:0.373333rem;
+            span{color:#f60;}
+        }
+        button.jiesuan{width: 3.306667rem;height: 1.333333rem;border:0 none;background: #f60;color:#fff;text-align: center;line-height:1.333333rem;font-size:0.426667rem;}
+    }
+    .hint{background: rgba(0,0,0,.5);font-size:0.373333rem;color:#fff;padding: 0.2rem;border-radius:0.533333rem;max-width:10.666667rem;display: none;}
+}

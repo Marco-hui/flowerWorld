@@ -1,0 +1,151 @@
+#ct_customer{
+    height:100%;font-size:0.373333rem;display: flex;flex-direction: column;
+    .header{
+        background: #fe6600;position: relative;color:#f0f0f0;
+        h2{
+            text-align: center;
+            line-height: 1.333333rem;
+            font-size:0.426667rem ;
+        }
+        span{
+            position:absolute;
+            left:0.266667rem;
+            top:50%;
+            transform: translateY(-50%);
+            font-size:0.373333rem;
+        }
+    }
+    .phone{
+        line-height: 1.6rem;
+        padding-left: 0.266667rem;
+        background: #fdf8de;
+        color:#807773;
+        i{
+            color:#fe6600;
+        }
+    }
+    .datagrid{
+        flex:1;
+        background:#f5f5f5;
+        overflow-x: hidden;
+        .anwser{
+            float:left;
+            .imgbox{
+                float:left;
+            }
+            .mes{
+                float:left;
+                .c_mes img{
+                    height:6.133333rem;
+                }
+            }
+            .mes:before{
+                border-left:0.213333rem solid #fff; 
+                border-bottom:0.213333rem solid #fff;  
+                left:-0.213333rem;
+            }
+        }
+        .question{
+            float:right;
+            .imgbox{
+                float:right;
+            }
+            .mes{
+                text-align: right;
+                float:right;
+            }
+            .mes:before{
+                border-right:0.213333rem solid #fff; 
+                border-top:0.213333rem solid #fff;  
+                right:-0.213333rem;
+            }
+        }
+        li{
+            padding: 0.266667rem;
+            width:100%;
+            .imgbox img{
+                width:1.066667rem;
+                height:1.066667rem;
+            }
+            .mes{
+                width:65%;margin:0 0.533333rem;position:relative;
+                .c_name{
+                    color:#999;
+                    display: block;
+                    font-size: 0.32rem;
+                }
+                .c_mes{
+                    padding:0.266667rem;
+                    background: #fff;
+                    border-radius: 0.133333rem;
+                }
+            }
+            .mes:before{
+                content:"";
+                position:absolute;
+                display: block;
+                top:0.733333rem;
+                width:0.266667rem;
+                height:0.266667rem;               
+                transform: rotate(45deg);              
+            }
+            .pro{
+                background: #fff;margin:0.533333rem 0;width:100%;padding: 0.266667rem;
+                display: flex;
+               .imgbox img{
+                    width:2.346667rem;
+                    height:2.56rem;
+               } 
+               .des{
+                flex:1;padding-left:0.266667rem;
+                .promaterial{
+                    line-height: 0.48rem;
+                    padding: 0.266667rem 0;
+                    color:#777;
+                }
+                .proprise{
+                    color:#fe6600;
+                    font-size: 0.426667rem;
+                }
+                .send{
+                    float:right;
+                    display: block;
+                    text-align: center;
+                    width:1.866667rem;
+                    height:0.666667rem;
+                    line-height: 0.666667rem;
+                    background: #fe6600;
+                    color:#fff;
+                }
+               }
+            } 
+        }
+    }
+    .foot{
+        display: flex;
+        border-top:0.026667rem solid #c4cccc;
+        height:1.333333rem;
+        justify-content: space-around;
+        background: #fafcfb;
+        padding: 0.16rem 0.266667rem;
+        input{
+            width:60%;
+            line-height: 1.066667rem;
+            font-size: 0.373333rem;
+            padding: 0.186667rem 0.133333rem;
+            border:0.026667rem solid  #c4cccc;
+            border-radius: 0.133333rem;
+        }
+        i{
+            width:0.906667rem;
+            height:0.906667rem;
+            text-align: center;
+            line-height: 0.906667rem;
+            border-radius: 50%;
+            color: #666;
+            border:0.026667rem solid #c4cccc;
+            font-size: 0.48rem;
+        }
+    }
+
+}
